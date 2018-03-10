@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ButtonCodeChallenge</string>
+    <string name="error_unable_to_connect">We\'re unable to connect to the server at this time.</string>
+    <string name="error_swipe_to_refresh">Swipe to refresh.</string>
+    <string name="create_user">Create User</string>
+    <string name="create_a_new_user">Create a new user</string>
+    <string name="enter_name">Enter name</string>
+    <string name="email_hint">sample@email.com</string>
+    <string name="error_create_user_failure">Failed to create user</string>
+    <string name="error_no_internet_connection">No Internet Connection</string>
+    <string name="error_incomplete_forms">Incomplete forms</string>
+</resources>

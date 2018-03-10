@@ -1,0 +1,119 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="colon.jonathan.buttoncodechallenge.ui.home.HomeViewModel"/>
+
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:padding="16dp"
+        tools:context=".ui.home.createUser.CreateUserFragment">
+
+        <android.support.v7.widget.CardView
+            style="@style/CardView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="2dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            app:cardBackgroundColor="@color/colorBackground"
+            app:cardCornerRadius="@dimen/cardview_default_radius"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/tv_title_create_user"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="@string/create_a_new_user"
+                    android:textColor="@color/colorTextDark"
+                    android:textSize="@dimen/text_size_header"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed"/>
+
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|start"
+                    android:hint="@string/enter_name"
+                    android:textColor="@color/colorTextDark"
+                    app:autoSizePresetSizes="@array/autosize_text_sizes"
+                    app:autoSizeStepGranularity="@dimen/step_granularity"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintBottom_toTopOf="@id/et_email"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_title_create_user"
+                    app:layout_constraintVertical_chainStyle="packed"/>
+
+                <EditText
+                    android:id="@+id/et_email"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|start"
+                    android:hint="@string/email_hint"
+                    android:textColor="@color/colorTextLight"
+                    app:autoSizePresetSizes="@array/autosize_text_sizes"
+                    app:autoSizeStepGranularity="2sp"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintBottom_toTopOf="@id/horizontal_guideline"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/et_name"/>
+
+                <Button
+                    android:id="@+id/btn_create_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/colorPrimary"
+                    android:padding="8dp"
+                    android:text="@string/create_user"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    >
+
+                </Button>
+
+                <android.support.constraint.Guideline
+                    android:id="@+id/horizontal_guideline"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent=".5"/>
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <include
+            android:id="@+id/error_message_container"
+            layout="@layout/error_layout"
+            android:visibility="gone">
+        </include>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
